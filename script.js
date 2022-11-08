@@ -51,7 +51,7 @@ function autoGenerate() {
   }
 
   else if (input == "gray") {
-    output.innerHTML = gray_black[Math.floor(Math.random() * gray.length)];
+    output.innerHTML = gray[Math.floor(Math.random() * gray.length)];
   }
 
   else if (input == "white") {
