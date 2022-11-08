@@ -63,3 +63,13 @@ function autoGenerate() {
   }
 
 }
+
+function restyle() {
+  var randoRed = Math.random() * 255;
+  var randoGreen = Math.random() * 255;
+  var randoBlue = Math.random() * 255;
+  var stringColor = "rgb(" + randoRed + "," + randoGreen + "," + randoBlue + ")";
+
+  animalOutput.style.color = stringColor;
+
+}
