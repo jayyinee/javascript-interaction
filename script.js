@@ -14,9 +14,10 @@ var blue = ["whale 🐳", "dolphin🐬", "fish 🐟"]
 var gray = ["gorilla 🦍", "wolf 🐺", "raccoon 🦝", "zebra 🦓", "water buffalo 🐃", "cow 🐄", "elephant 🐘", "rhinoceros 🦏", "hippopotamus 🦛", "mouse 🐭", "penguin🐧", "dodo 🦤", "seal 🦭", "shark 🦈", "koala 🐨", "panda 🐼", "skunk 🦨", "badger 🦡", "ram 🐏", "llama 🦙"]
 var white = ["rabbit 🐇", "polar bear 🐻‍❄️", "chicken 🐔", "dove 🕊️", "swan 🦢"]
 
-button.addEventListener("click", autoGenerate);
+button.addEventListener("click", generate);
+button.addEventListener("click", restyle);
 
-function autoGenerate() {
+function generate() {
   var input = colorInput.value;
 
   if (input == "pink") {
@@ -51,7 +52,7 @@ function autoGenerate() {
   }
 
   else if (input == "gray") {
-    output.innerHTML = gray_black[Math.floor(Math.random() * gray.length)];
+    output.innerHTML = gray[Math.floor(Math.random() * gray.length)];
   }
 
   else if (input == "white") {
@@ -61,5 +62,15 @@ function autoGenerate() {
   else {
     output.innerHTML = "i guess you wanna be unique, so here is a unicorn 🦄"
   }
+
+}
+
+function restyle() {
+  var randoRed = Math.random() * 255;
+  var randoGreen = Math.random() * 255;
+  var randoBlue = Math.random() * 255;
+  var stringColor = "rgb(" + randoRed + "," + randoGreen + "," + randoBlue + ")";
+
+  animalOutput.style.color = stringColor;
 
 }
